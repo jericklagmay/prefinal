@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello World</title>
+    <style>
+        /* General reset and body styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            /* Add a background image for the whole page */
+            background: url(y.jpg) no-repeat center center fixed; /* Background image for the entire page */
+            background-size: cover; /* Make sure the image covers the full screen */
+            color: #ffffff;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .container {
+            background: url('y.jpg') no-repeat center center; /* Background image inside container */
+            background-size: cover; /* Ensure image covers the container */
+            color: #ffffff; /* Text color inside container */
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4); /* Stronger shadow for a more dramatic effect */
+            text-align: center;
+            max-width: 400px;
+            width: 100%;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            background: linear-gradient(120deg, #ff007f, #6a11cb);
+            -webkit-background-clip: text;
+            color: transparent;
+            text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.6); /* More pronounced text shadow */
+        }
+
+        /* Button Styling */
+        .btn {
+            padding: 15px 30px;
+            background-color: #ffffff;
+            color: #6a11cb;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+            font-weight: bold;
+        }
+
+        /* Hover effects for the button */
+        .btn:hover {
+            background-color: #6a11cb;
+            color: white;
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(106, 17, 203, 0.3); /* Button shadow on hover */
+        }
+
+        /* Text under the button */
+        .additional-text {
+            font-size: 1.1rem;
+            color: #ff007f; /* Changed text color to a pinkish shade */
+            margin-top: 15px;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .btn {
+                font-size: 1rem;
+                padding: 12px 25px;
+            }
+
+            .container {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Hello, World!</h1>
+        <!-- Button now redirects to body.html when clicked -->
+        <button class="btn" onclick="window.location.href='body.html'">Click Here</button>
+        <!-- Text below the button -->
+        <p class="additional-text">Click the button!</p>
+    </div>
+    
+</body>
+</html>

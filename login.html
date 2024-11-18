@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        /* Styles for Login Form */
+        body {
+            background-image: url('pi.gif');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+            background-color: black; /* Pleasant background color */
+            font-family: Arial, sans-serif;
+        }
+
+        #loginContainer {
+            width:250px;
+            margin: 0 auto;
+            margin-top: 150px;
+            background-color: white; /* Container background color */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Table Layout for the login form */
+        table {
+            width: 100%;
+            border-spacing: 0;
+        }
+
+        td {
+            padding: 10px;
+            text-align: center;
+        }
+
+        .loginInput {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .loginButton {
+            width: calc(100% - 20px);
+            padding: 15px;
+            background-color:gray;
+            color: black;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .loginButton:hover {
+            color: black;
+            background-color: black;
+            text-decoration: underline;
+            background-color: gray;
+        }
+
+    </style>
+</head>
+<body>
+
+<div id="loginContainer">
+    <table>
+        <tr>
+            <td colspan="2"><h2>Login</h2></td>
+        </tr>
+        <tr>
+            <td><input type="text" id="username" class="loginInput" placeholder="Username" required></td>
+        </tr>
+        <tr>
+            <td><input type="password" id="password" class="loginInput" placeholder="Password" required></td>
+        </tr>
+        <tr>
+            <td><button onclick="login()" class="loginButton">Login</button></td>
+        </tr>
+    </table>
+</div>
+
+<script>
+    function login() {
+        var username = document.getElementById('username').value;
+        var password = document.getElementById('password').value;
+
+        // Simple validation to check if fields are empty
+        if (username === "" || password === "") {
+            alert("Please enter both username and password.");
+            return; // Stop execution if fields are empty
+        }
+
+        if (username === "1234" && password === "1234") {
+            // Redirect to nextPage.html after successful login
+            window.location.href = "style.html";  // You can change this to your actual next page URL
+        } else {
+            // Show error message if credentials are invalid
+            alert("Invalid username or password!");
+        }
+    }
+</script>
+
+</body>
+</html>
